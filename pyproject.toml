@@ -1,0 +1,15 @@
+[project]
+name = "red-team-operations-framework"
+version = "0.1.0"
+description = "Framework modulaire pour structurer, automatiser et documenter des opérations Red Team."
+authors = [{ name = "Teremu" }]
+requires-python = ">=3.10"
+
+[project.scripts]
+rtops = "rtops.cli:main"
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
