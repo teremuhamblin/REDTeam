@@ -119,5 +119,8 @@ Elle apporte une vision stratégique, réaliste et opérationnelle de la posture
 
 ---
 
-**Document : REDTeam.md — Version technique & stylée**  
+**Document : REDTeam.md**
+- Version technique
+```md
 *Pour intégration dans un projet GitHub ou documentation cyber.*
+```
