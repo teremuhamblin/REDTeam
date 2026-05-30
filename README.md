@@ -13,6 +13,14 @@ RTOPS est un framework modulaire conçu pour structurer, automatiser et document
 - Servir de base pédagogique et opérationnelle
 ```
 
+### 🔴 Renseignement opérationnel
+>ORTU-SF
+- Unité operationnelle militaire spécialisée dans la simulation et la conception avancée.
+   - Elle représente une division tactique, furtive et orientée opérations, dédiée à l’émulation d’attaquants dans un cadre contrôlé.
+   - 🎨 Style : militaire, rouge sombre, forces spéciales
+   - 🎯 Mission : adversary emulation, tests de résilience, scénarios tactiques
+   - 🛡 Valeurs : furtivité, précision, discipline, réalisme
+
 ### 🧱 Structure
 ```text
 - rtops/ : cœur Python (modules Red Team)
