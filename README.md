@@ -1,7 +1,9 @@
 ###### README.md >> markdown 
 # 🔴 REDTeam
 >Operations Framework (RTOPS)
-RTOPS est un framework modulaire conçu pour structurer, automatiser et documenter des opérations Red Team.
+```text
+RTOPS est un framework modulaire conçu pour structurer, automatiser et documenter des opérations REDTeam
+```
 
 ### 🎯 Objectifs
 ```text
@@ -20,7 +22,7 @@ RTOPS est un framework modulaire conçu pour structurer, automatiser et document
 - tests/ : tests unitaires
 ```
 
-###🚀 Installation
+### 🚀 Installation
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
