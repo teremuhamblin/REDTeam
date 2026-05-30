@@ -1,7 +1,9 @@
 ###### REDTeam.md >> markdown 
 # 🔴 REDTeam
 - Description Technique
+
 La **Red Team** est une unité offensive contrôlée dont la mission est de simuler un adversaire réel afin d’évaluer la sécurité globale d’une organisation.  
+
 Elle reproduit des **TTP (Tactics, Techniques & Procedures)** inspirées de groupes d’attaquants avancés, dans un cadre légal strict et défini par des *Rules of Engagement (ROE)*.
 
 ---
