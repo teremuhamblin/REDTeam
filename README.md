@@ -1,4 +1,6 @@
-###### README.md >> markdown 
+###### README.md >> markdown
+[![Updated](https://img.shields.io/badge/Updated-2026--05--30-000000?style=for-the-badge&logoColor=white)](https://github.com/rawfilejson/awesome-osint-arsenal)
+[![Stars](https://img.shields.io/github/stars/rawfilejson/awesome-osint-arsenal?style=for-the-badge&color=red&logo=github)](https://github.com/rawfilejson/awesome-osint-arsenal/stargazers)
 # 🔴 REDTeam
 >Operations Framework (RTOPS)
 ```text
@@ -73,5 +75,4 @@ rtops recon -t example.com
 The UnLicense
 Copyright (c) **The MadDoG.tmdg**
 - Permission is hereby granted
-   - free of charge, to any person obtaining a copy...
 ```
