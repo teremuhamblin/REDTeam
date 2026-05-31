@@ -74,5 +74,72 @@ rtops recon -t example.com
 ```text
 The UnLicense
 Copyright (c) **The MadDoG.tmdg**
-- Permission is hereby granted
+- Permission is here by granted
 ```
+
+### ⚖️ Avertissement légal
+```md
+- (Legal Disclaimer)
+   - Ce projet est fourni exclusivement à des fins éducatives, de recherche en cybersécurité et de tests d’intrusion autorisés.
+   - L’utilisation de ce dépôt implique l’acceptation stricte des règles d’OpSec définies dans docs/opsec.md et des Rules of Engagement définies dans docs/rules-of-engagement.md.
+```
+
+---
+
+### ✅ Utilisations autorisées
+```text
+>Ces usages sont légaux uniquement si vous disposez d’une autorisation explicite :
+- Recherche en cybersécurité sur vos propres systèmes  
+   - Tests d’intrusion avec accord écrit du propriétaire  
+   - OSINT dans un cadre journalistique  ou d’enquête légitime  
+   - Programmes de bug bounty dans un périmètre défini  
+   - Formations, sensibilisation et exercices internes Red Team / Blue Team
+```
+
+---
+
+### ❌ Utilisations interdites
+>(ne jamais faire)
+```text
+Ces actions sont illégales et strictement interdites :
+   - Accès non autorisé à un système, réseau ou compte  
+   - Harcèlement, stalking ou collecte intrusive d’informations personnelles  
+   - Vol d’identifiants ou contournement d’authentification  
+   - Attaques DDoS ou perturbation de services tiers  
+   - Atteinte à la vie privée ou exploitation de données sensibles  
+```
+
+---
+
+### 📜 Cadre légal applicable
+>Les lois suivantes (entre autres) s’appliquent selon votre juridiction :
+- GDPR / RGPD (Union Européenne)  
+- LCEN & Code pénal (France)  
+- CCPA (Californie)  
+- CFAA (États‑Unis)  
+- Computer Misuse Act (Royaume‑Uni)  
+
+> ⚠️ Vous êtes seul responsable de vos actions.
+- Les mainteneurs du projet REDTeam ne pourront en aucun cas être tenus responsables d’un usage abusif, illégal ou contraire à l’éthique des outils ou informations présents dans ce dépôt.
+
+---
+
+<div align="center">
+
+<br/>
+###### 🛡️ Construit pour la communauté cybersécurité, Red Team & OSINT.
+###### 🧠 La connaissance est une arme — utilisez‑la avec responsabilité.
+
+<br/>
+⭐ Pensez à mettre une étoile au dépôt si ce projet vous est utile !
+
+</div>
+
+---
+
+[![GitHub stars](https://img.shields.io/github/stars/rawfilejson/awesome-osint-arsenal?style=social)](https://github.com/rawfilejson/awesome-osint-arsenal/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/rawfilejson/awesome-osint-arsenal?style=social)](https://github.com/rawfilejson/awesome-osint-arsenal/network/members)
+
+<br/>
+
+</div>
