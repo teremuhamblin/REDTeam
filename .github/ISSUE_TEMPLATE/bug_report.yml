@@ -1,0 +1,29 @@
+name: Bug report
+about: Signaler un bug
+title: "[BUG] "
+labels: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Description**
+        Décris le bug rencontré.
+
+  - type: input
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      description: Décris les étapes pour reproduire le bug
+      placeholder: "1. ..."
+
+  - type: input
+    id: expected
+    attributes:
+      label: Résultat attendu
+      placeholder: "Ce que tu attendais"
+
+  - type: input
+    id: actual
+    attributes:
+      label: Résultat observé
+      placeholder: "Ce qui s'est passé"
