@@ -1,0 +1,17 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  dependency-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install safety
+        run: pip install safety
+      - name: Run safety check
+        run: safety check -r requirements.txt || true
