@@ -1,0 +1,18 @@
+name: Pull request template
+about: Template pour les PR
+title: "[PR] "
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Résumé des changements
+      description: "Explique brièvement ce que fait cette PR"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: J'ai ajouté/actualisé les tests
+        - label: J'ai mis à jour la documentation
+        - label: J'ai vérifié les impacts OpSec
