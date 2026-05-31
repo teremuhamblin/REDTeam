@@ -1,15 +1,52 @@
-[project]
-name = "red-team-operations-framework"
+[tool.poetry]
+name = "redteam-rtops"
 version = "0.1.0"
-description = "Framework modulaire pour structurer, automatiser et documenter des opérations Red Team."
-authors = [{ name = "Teremu" }]
-requires-python = ">=3.10"
+description = "REDTeam toolkit for lab-only reconnaissance, initial access simulation, lateral movement and persistence."
+authors = ["Teremu <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://example.com/REDTeam"
+repository = "https://example.com/REDTeam.git"
+keywords = ["redteam", "security", "recon", "phishing", "pentest", "lab"]
 
-[project.scripts]
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1"
+requests = "^2.31"
+PyYAML = "^6.0"
+cryptography = "^41.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4"
+black = "^24.3"
+ruff = "^0.12"
+flake8 = "^6.1"
+mypy = "^1.5"
+build = "^1.1"
+sphinx = "^7.2"
+
+[tool.poetry.scripts]
 rtops = "rtops.cli:main"
 
-[tool.black]
-line-length = 100
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
 
-[tool.pytest.ini_options]
-addopts = "-ra -q"
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+skip-string-normalization = false
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "C", "N"]
+ignore = ["E203", "W503"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+
+[tool.mypy]
+python_version = 3.11
+ignore_missing_imports = true
+strict = false
