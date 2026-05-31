@@ -71,6 +71,7 @@ rtops recon -t example.com
 ### LICENSE
 ```text
 The UnLicense
-Copyright (c) 2026 Teremu
-Permission is hereby granted, free of charge, to any person obtaining a copy...
+Copyright (c) **The MadDoG.tmdg**
+- Permission is hereby granted
+   - free of charge, to any person obtaining a copy...
 ```
