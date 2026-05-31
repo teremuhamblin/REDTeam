@@ -13,6 +13,11 @@ RTOPS est un framework modulaire conçu pour structurer, automatiser et document
 - Servir de base pédagogique et opérationnelle
 ```
 
+```md
+>> - Le projet `Toolkit REDTeam`
+our usage en `laboratoire uniquement`. >> - Voir docs/ pour la documentation et Makefile pour les commandes utiles.
+```
+
 ### 🔴 Renseignement opérationnel
 >ORTU-SF
 - Unité operationnelle militaire spécialisée dans la simulation et la conception avancée.
@@ -39,6 +44,17 @@ pip install -e
 ```
 
 ### ▶️ Utilisation rapide
+- Instructions d'utilisation rapide
+1. Copier les fichiers dans la structure de ton dépôt.  
+2. Créer un environnement virtuel : make venv puis source .venv/bin/activate.  
+3. Installer les dépendances : make install.  
+4. Lancer les tests : make test.  
+5. Exécuter le CLI : make run ou python -m rtops.cli recon example.com.
+6. Recon rapide
+```md
+>> - EXAMPLE.COM
+```
+d'ou
 ```bash
 rtops recon -t example.com
 ```
@@ -51,3 +67,10 @@ rtops recon -t example.com
 >Toute utilisation non autorisée est strictement interdite.
 
 ---
+
+### LICENSE
+```text
+The UnLicense
+Copyright (c) 2026 Teremu
+Permission is hereby granted, free of charge, to any person obtaining a copy...
+```
