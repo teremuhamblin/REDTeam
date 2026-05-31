@@ -1,0 +1,16 @@
+name: Feature request
+about: Proposer une nouvelle fonctionnalité
+title: "[FEATURE] "
+labels: enhancement
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Résumé
+      placeholder: "Courte description de la fonctionnalité"
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Détails
+      placeholder: "Pourquoi cette fonctionnalité est utile ?"
