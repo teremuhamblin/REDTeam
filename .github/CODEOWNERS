@@ -1,0 +1,10 @@
+# CODEOWNERS — définit les responsables du dépôt REDTeam
+
+# Propriétaire principal
+* @teremuhamblin 
+
+# Dossiers critiques
+/docs/ @teremuhamblin 
+/rtops/ @teremuhamblin 
+/scripts/ @teremuhamblin 
+/reports/ @teremuhamblin 
