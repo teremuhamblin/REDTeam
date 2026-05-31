@@ -1,0 +1,141 @@
+{
+  "project": "REDTeam",
+  "version": "1.0.0",
+  "updated": "2026-05-31",
+  "description": "Catalogue officiel des outils du framework REDTeam, utilisé pour l'entraînement, l'émulation d'adversaires et les cyber-ranges.",
+  "modules": {
+    "recon": {
+      "label": "Reconnaissance",
+      "description": "Collecte d'informations, scanning, fingerprinting.",
+      "tools": [
+        {
+          "name": "nmap",
+          "type": "binary",
+          "category": "network-scan",
+          "install": { "pkg": ["nmap"] }
+        },
+        {
+          "name": "arjun",
+          "type": "python",
+          "category": "web-param-discovery",
+          "install": { "pip": ["arjun"] }
+        },
+        {
+          "name": "XSStrike",
+          "type": "git",
+          "category": "xss-detection",
+          "install": {
+            "git": "https://github.com/s0md3v/XSStrike.git",
+            "dest": "/opt/redteam-lab/XSStrike"
+          }
+        },
+        {
+          "name": "nuclei-templates",
+          "type": "git",
+          "category": "vulnerability-templates",
+          "install": {
+            "git": "https://github.com/projectdiscovery/nuclei-templates.git",
+            "dest": "/opt/redteam-lab/nuclei-templates"
+          }
+        }
+      ]
+    },
+
+    "initial_access": {
+      "label": "Initial Access",
+      "description": "Accès initial, exploitation contrôlée, phishing.",
+      "tools": [
+        {
+          "name": "impacket",
+          "type": "python",
+          "category": "network-exploitation",
+          "install": { "pip": ["impacket"] }
+        },
+        {
+          "name": "ghauri",
+          "type": "git",
+          "category": "sql-injection",
+          "install": {
+            "git": "https://github.com/r0oth3x49/ghauri.git",
+            "dest": "/opt/redteam-lab/ghauri"
+          }
+        }
+      ]
+    },
+
+    "lateral_movement": {
+      "label": "Lateral Movement",
+      "description": "Mouvement latéral, exploitation AD, Kerberos.",
+      "tools": [
+        {
+          "name": "evil-winrm",
+          "type": "binary",
+          "category": "winrm-shell",
+          "install": { "pkg": ["evil-winrm"] }
+        },
+        {
+          "name": "netexec",
+          "type": "python",
+          "category": "ad-post-exploitation",
+          "install": { "pip": ["netexec"] }
+        },
+        {
+          "name": "Rubeus",
+          "type": "git",
+          "category": "kerberos-attacks",
+          "install": {
+            "git": "https://github.com/GhostPack/Rubeus.git",
+            "dest": "/opt/redteam-lab/Rubeus"
+          }
+        }
+      ]
+    },
+
+    "persistence": {
+      "label": "Persistence",
+      "description": "Maintien d'accès contrôlé.",
+      "tools": [
+        {
+          "name": "Empire",
+          "type": "git",
+          "category": "post-exploitation-framework",
+          "install": {
+            "git": "https://github.com/BC-SECURITY/Empire.git",
+            "dest": "/opt/redteam-lab/Empire"
+          }
+        }
+      ]
+    },
+
+    "utils": {
+      "label": "Utilities",
+      "description": "Outils auxiliaires, support, DNS, JSON.",
+      "tools": [
+        {
+          "name": "jq",
+          "type": "binary",
+          "category": "json-utils",
+          "install": { "pkg": ["jq"] }
+        },
+        {
+          "name": "whois",
+          "type": "binary",
+          "category": "osint",
+          "install": { "pkg": ["whois"] }
+        },
+        {
+          "name": "dnsutils",
+          "type": "binary",
+          "category": "dns",
+          "install": { "pkg": ["dnsutils", "bind9-dnsutils"] }
+        }
+      ]
+    }
+  },
+
+  "lab": {
+    "work_dir": "/tmp/redteam_workdir",
+    "lab_root": "/opt/redteam-lab",
+    "profiles": ["minimal", "training", "full-range"]
+  }
+}
