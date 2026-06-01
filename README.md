@@ -170,10 +170,12 @@ Ces actions sont illégales et strictement interdites :
 <div align="center">
 
 <br/>
-🛡️ Construit pour la communauté cybersécurité REDTeam.
+🛡️ Construit pour la communauté
+- cybersécurité REDTeam.
 
 <br/>
-🧠 La connaissance est une arme — utilisez-là avec responsabilité.
+🧠 La connaissance est une arme
+- utilisez-là avec responsabilité.
 
 <br/>
 ⭐ Pensez à mettre une étoile au dépôt si ce projet vous est utile !
