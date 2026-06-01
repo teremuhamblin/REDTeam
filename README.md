@@ -1,4 +1,8 @@
 ###### README.md >> markdown
+[![Security Scan](https://github.com/teremuhamblin/REDTeam/actions/workflows/security-scan.yml/badge.svg)](https://github.com/teremuhamblin/REDTeam/actions/workflows/security-scan.yml)
+
+---
+
 [![Updated](https://img.shields.io/badge/Updated-2026--05--30-8B0000?style=for-the-badge&logoColor=white)](https://github.com/rawfilejson/awesome-osint-arsenal)
 [![Stars](https://img.shields.io/github/stars/rawfilejson/awesome-osint-arsenal?style=for-the-badge&color=8B0000&logo=github)](https://github.com/rawfilejson/awesome-osint-arsenal/stargazers)
 # 🔴 REDTeam
