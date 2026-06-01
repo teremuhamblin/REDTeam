@@ -1,0 +1,78 @@
+# ============================================================
+#  RELEASE-TEMPLATE.YML — REDTeam Framework
+#  Template standardisé pour les releases GitHub
+# ============================================================
+
+release:
+  project: "REDTeam"
+  maintainer: "Unité CYBER"
+  format: "markdown+yml"
+  generated: true
+
+sections:
+  - title: "🚀 Nouveautés"
+    key: "features"
+    items:
+      - "[ ] Nouvelle fonctionnalité"
+      - "[ ] Nouveau module"
+      - "[ ] Amélioration majeure"
+
+  - title: "🛠️ Améliorations"
+    key: "improvements"
+    items:
+      - "[ ] Optimisation du code"
+      - "[ ] Amélioration des performances"
+      - "[ ] Refactoring"
+
+  - title: "🐞 Corrections"
+    key: "fixes"
+    items:
+      - "[ ] Correction de bug"
+      - "[ ] Correction de dépendance"
+      - "[ ] Correction de sécurité"
+
+  - title: "🔐 Sécurité"
+    key: "security"
+    items:
+      - "[ ] Mise à jour des dépendances"
+      - "[ ] Patch de vulnérabilité"
+      - "[ ] Analyse SAST/DAST"
+
+  - title: "📦 Packaging"
+    key: "packaging"
+    items:
+      - "[ ] Mise à jour du pyproject"
+      - "[ ] Mise à jour du Makefile"
+      - "[ ] Mise à jour des requirements"
+
+  - title: "📚 Documentation"
+    key: "documentation"
+    items:
+      - "[ ] Mise à jour des docs"
+      - "[ ] Mise à jour du README"
+      - "[ ] Mise à jour des diagrammes"
+
+metadata:
+  version_file: "./version.yml"
+  changelog_file: "./CHANGELOG.md"
+  roadmap_file: "./ROADMAP.md"
+  architecture_file: "./docs/architecture.md"
+
+ci_cd:
+  auto_tag: true
+  auto_changelog: true
+  auto_release_notes: true
+  github_actions:
+    - ci.yml
+    - security-scan.yml
+
+artifacts:
+  generate:
+    - "dist/*"
+    - "reports/*"
+    - "logs/*"
+  upload: true
+
+signing:
+  enabled: true
+  algorithm: "sha256"
