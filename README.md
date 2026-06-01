@@ -28,6 +28,49 @@ our usage en `laboratoire uniquement`. >> - Voir docs/ pour la documentation et 
    - 🎯 Mission : adversary emulation, tests de résilience, scénarios tactiques
    - 🛡 Valeurs : furtivité, précision, discipline, réalisme
 
+### 📦 Fichiers YAML
+>Configuration Système REDTeam
+   - Ces fichiers .yml définissent la structure interne, la version, et les releases du framework REDTeam.  
+   - Ils servent de base à la CI/CD, au versioning et à la documentation automatisée.
+
+---
+
+### 🧬 version.yml
+>Fichier officiel de versioning du projet.  
+
+Contient :
+- version majeure / mineure / patch  
+- nom de code  
+- numéro de build  
+- compatibilité Python / OS  
+- checksum & métadonnées  
+
+---
+
+### 🗂️ metadata.yml
+>Métadonnées globales du framework.  
+
+Décrit :
+- modules Python  
+- scripts opérationnels  
+- templates de rapports  
+- documentation  
+- workflows CI/CD  
+- sécurité & OpSec  
+
+---
+
+### 🚀 release-template.yml
+>Template standardisé pour les releases GitHub.  
+
+Inclut :
+- sections (features, fixes, sécurité, docs…)  
+- cases à cocher  
+- artefacts à générer  
+- signature & automatisation CI/CD  
+
+---
+
 ### 🧱 Structure
 ```text
 - rtops/ : cœur Python (modules Red Team)
