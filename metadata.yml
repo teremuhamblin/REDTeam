@@ -1,0 +1,76 @@
+# ============================================================
+#  METADATA.YML — REDTeam Framework
+#  Métadonnées globales du projet (documentation, modules, CI)
+# ============================================================
+
+project:
+  name: "REDTeam"
+  description: "Framework cyber-offensif modulaire pour opérations Red Team simulées."
+  owner: "Unité CYBER"
+  license: "MIT"
+  repository: "https://github.com/teremu/REDTeam"
+
+documentation:
+  root: "./docs"
+  files:
+    - architecture.md
+    - glossary.md
+    - opsec.md
+    - rules-of-engagement.md
+    - methodology.md
+    - structure.md
+
+modules:
+  python:
+    - name: "recon"
+      path: "rtops/recon"
+      description: "Reconnaissance passive et active"
+    - name: "initial_access"
+      path: "rtops/initial_access"
+      description: "Phishing simulé et exploitation contrôlée"
+    - name: "lateral_movement"
+      path: "rtops/lateral_movement"
+      description: "SMB, pivoting, enumeration interne"
+    - name: "persistence"
+      path: "rtops/persistence"
+      description: "Techniques low-noise"
+    - name: "utils"
+      path: "rtops/utils"
+      description: "Logging, configuration, helpers"
+
+scripts:
+  operational:
+    - opsec_checklist.sh
+    - infralabsetup.sh
+    - generate_reports.sh
+    - template.sh
+
+reports:
+  templates:
+    - executive_summary.md
+    - technical_report.md
+    - findings_template.md
+
+ci_cd:
+  workflows:
+    - ci.yml
+    - security-scan.yml
+  tools:
+    - pytest
+    - codeql
+    - bandit
+    - trivy
+
+security:
+  opsec: "./docs/opsec.md"
+  rules_of_engagement: "./docs/rules-of-engagement.md"
+  secret_scanning: true
+
+versioning:
+  file: "./version.yml"
+  changelog: "./CHANGELOG.md"
+  roadmap: "./ROADMAP.md"
+
+metadata:
+  generated: true
+  last_update: "2026-06-01"
