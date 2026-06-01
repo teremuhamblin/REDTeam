@@ -17,6 +17,8 @@ REDTeam/
 ├── docs/
 │   ├── .gitkeep
 │   ├── README.md
+│   ├── tool.md
+│   ├── information.md
 │   ├── architecture.md
 │   ├── glossary.md
 │   ├── opsec.md
@@ -193,5 +195,261 @@ Le projet est organisé en couches logiques séparant l'infrastructure de suppor
   - Makefile : commandes récurrentes (test, lint, build).  
   - requirements-dev.txt : outils de développement.  
 - Contacts : référencer l'équipe responsable et la procédure d'escalade dans docs/README.md.
+
+---Voici architecture.md, version premium, complète, stylée, avec diagrammes ASCII, schémas d’architecture, explications détaillées, et une cohérence totale avec ton framework REDTeam.  
+Le fichier est prêt à être collé dans docs/architecture.md.
+
+---
+
+### 🏗️ Architecture du Projet REDTeam
+- Framework Cyber‑Offensif Modulaire — Unité CYBER
+> “Structure drives capability. Capability drives dominance.”
+
+Ce document décrit l’architecture complète du projet REDTeam, incluant :  
+- la structure logicielle  
+- les modules Python (rtops/)  
+- les scripts opérationnels (scripts/)  
+- les templates de rapports  
+- les workflows CI/CD  
+- les interactions internes  
+- les diagrammes d’architecture
+
+---
+
+1. 📦 Vue d’ensemble du projet
+```text
+REDTeam/
+├── rtops/               → Core Python package (TTPs, modules offensifs)
+├── scripts/             → Automatisation, OpSec, lab, reporting
+├── reports/             → Templates & génération de rapports
+├── docs/                → Documentation technique & opérationnelle
+├── tests/               → Tests unitaires & intégration
+└── .github/             → Workflows CI/CD, templates PR/Issues
+```
+
+Cette architecture suit trois principes :  
+- Modularité : chaque domaine offensif est isolé.  
+- Traçabilité : tout est documenté, testé, versionné.  
+- OpSec : aucune donnée sensible n’est stockée ou exposée.
+
+---
+
+### 2. 🧩 Architecture logique (diagramme global)
+```text
+                   ┌──────────────────────────┐
+                   │        REDTeam CLI        │
+                   │     (scripts + rtops)     │
+                   └──────────────┬───────────┘
+                                  │
+                     ┌────────────┴────────────┐
+                     │                         │
+             ┌───────▼───────┐         ┌──────▼────────┐
+             │   rtops/       │         │   scripts/     │
+             │  Python Core   │         │ Bash Automation │
+             └───────┬───────┘         └──────┬─────────┘
+                     │                         │
+     ┌───────────────┼─────────────────────────┼──────────────────────────┐
+     │               │                         │                          │
+┌────▼────┐    ┌─────▼────┐             ┌──────▼──────┐           ┌──────▼──────┐
+│ Recon   │    │ Initial   │             │ Lab Setup    │           │ Reporting   │
+│ Module  │    │ Access    │             │ Automation   │           │ Generator   │
+└─────────┘    └───────────┘             └──────────────┘           └─────────────┘
+```
+
+---
+
+### 3. 🐍 Architecture du package >Python rtops/
+```text
+rtops/
+├── cli.py                 → Entrée CLI Python
+├── utils/                 → Logging, config, helpers
+├── recon/                 → Reconnaissance passive & active
+├── initial_access/        → Phishing, exploitation simulée
+├── lateral_movement/      → SMB, pivoting, enumeration
+└── persistence/           → Techniques de persistance
+```
+
+### 3.1 Diagramme interne du package
+```text
+                   ┌──────────────────────────────┐
+                   │            cli.py             │
+                   │   (commande principale)       │
+                   └───────────────┬──────────────┘
+                                   │
+                     ┌─────────────┼────────────────┐
+                     │             │                │
+             ┌───────▼──────┐ ┌────▼────────┐ ┌────▼────────┐
+             │ recon/        │ │ initial     │ │ lateral     │
+             │ passive/active│ │ access/      │ │ movement/    │
+             └───────────────┘ └──────────────┘ └──────────────┘
+                     │             │                │
+                     └──────┬──────┴──────┬────────┘
+                            │             │
+                     ┌──────▼──────┐ ┌────▼────────┐
+                     │ persistence/ │ │ utils/      │
+                     └──────────────┘ └─────────────┘
+```
+
+### 3.2 Rôle des modules
+
+| Module | Rôle |
+|--------|------|
+| recon/ | OSINT, scans, fingerprinting |
+| initial_access/ | Phishing simulé, exploitation contrôlée |
+| lateral_movement/ | SMB, pivoting, enumeration interne |
+| persistence/ | Techniques low‑noise |
+| utils/ | Logging, configuration, helpers |
+
+---
+
+### 4. 🛠️ Architecture des scripts
+>(scripts/)
+```text
+scripts/
+├── opsec_checklist.sh      → Vérification OpSec avant opération
+├── infralabsetup.sh        → Déploiement d’un lab cyber isolé
+├── generate_reports.sh      → Génération automatique de rapports
+└── template.sh              → Template standardisé pour nouveaux scripts
+```
+
+### 4.1 Diagramme d’interaction
+```text
+┌──────────────────────┐
+│  opsec_checklist.sh  │
+│  (pré‑opération)      │
+└───────────┬──────────┘
+            │
+┌───────────▼──────────┐
+│  infralabsetup.sh     │
+│  (environnement)       │
+└───────────┬──────────┘
+            │
+┌───────────▼──────────┐
+│ generate_reports.sh   │
+│ (post‑opération)       │
+└────────────────────────┘
+```
+
+---
+
+### 5. 📄 Architecture des rapports
+>(reports/)
+```text
+reports/
+├── templates/
+│   ├── executive_summary.md
+│   ├── technical_report.md
+│   └── findings_template.md
+└── README.md
+```
+
+### 5.1 Pipeline de génération
+```text
+┌───────────────────────────────┐
+│   Données opérationnelles      │
+└───────────────┬───────────────┘
+                │
+       ┌────────▼────────┐
+       │ generate_reports │
+       │     .sh          │
+       └────────┬────────┘
+                │
+       ┌────────▼────────┐
+       │  Templates MD    │
+       └────────┬────────┘
+                │
+       ┌────────▼────────┐
+       │ Rapport final    │
+       └──────────────────┘
+```
+
+---
+
+### 6. 🧪 Architecture des tests
+>(tests/)
+```text
+tests/
+├── test_recon.py
+├── test_utils.py
+└── README.md
+```
+
+Les tests couvrent :  
+- les modules Python (rtops/)  
+- les fonctions critiques (utils/)  
+- la cohérence des outputs  
+
+---
+
+### 7. 🔄 Architecture CI/CD
+>(.github/workflows/)
+```text
+.github/workflows/
+├── ci.yml              → Tests + linting + build
+└── security-scan.yml   → Analyse SAST + dépendances
+```
+
+### 7.1 Diagramme CI/CD
+```text
+Push / PR
+   │
+   ├──► ci.yml
+   │       ├── Lint
+   │       ├── Tests
+   │       └── Build
+   │
+   └──► security-scan.yml
+           ├── SAST
+           ├── Dependency Scan
+           └── Secret Detection
+```
+
+---
+
+### 8. 🧬 Architecture conceptuelle
+>(vue cyber‑opérationnelle)
+```text
+┌──────────────────────────────────────────────────────────────┐
+│                          REDTeam                              │
+│                                                              │
+│  Recon → Initial Access → Execution → LM → Persistence → EXF │
+│                                                              │
+│  (Modules Python)         (Scripts)         (Rapports)        │
+└──────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 9. 🧱 Principes d’architecture
+### 9.1 Modularité
+Chaque domaine offensif est isolé dans un module dédié.
+
+### 9.2 Séparation des responsabilités
+- Python = logique offensive  
+- Bash = orchestration / automatisation  
+- Markdown = documentation / reporting  
+
+### 9.3 OpSec by design
+- Pas de données sensibles  
+- Pas d’artefacts persistants  
+- Isolation stricte  
+
+### 9.4 Scalabilité
+L’architecture permet d’ajouter facilement :  
+- de nouveaux modules Python  
+- de nouveaux scripts  
+- de nouveaux templates de rapports  
+
+---
+
+### 10. 🔚 Conclusion
+L’architecture REDTeam est conçue pour être :  
+- modulaire  
+- sécurisée  
+- scalable  
+- professionnelle  
+- alignée avec les standards Red Team modernes
+
+Elle permet d’opérer, documenter, automatiser et tester l’ensemble du cycle offensif dans un cadre contrôlé, éthique et OpSec‑safe.
 
 ---
