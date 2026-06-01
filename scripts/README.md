@@ -18,8 +18,7 @@ Chaque script est conçu pour être :
 ---
 
 📁 Structure du dossier
-
-`
+```text
 scripts/
 ├── redteamctl.sh          # CLI officiel du framework
 ├── infralabsetup.sh       # Setup du lab d'entraînement
@@ -29,7 +28,7 @@ scripts/
 ├── opsec_checklist.sh     # Checklist OpSec interactive
 ├── template.sh            # Template standard pour nouveaux scripts
 └── README.md              # Ce fichier
-`
+```
 
 ---
 
