@@ -1,0 +1,41 @@
+# ============================================================
+#  VERSION.YML — REDTeam Framework
+#  Fichier officiel de versioning du projet
+#  Utilisé par CI/CD, packaging, releases et documentation
+# ============================================================
+
+project: "REDTeam"
+maintainer: "Unité CYBER"
+type: "version-file"
+format: "yaml"
+generated: true
+
+version:
+  major: 10
+  minor: 0
+  patch: 0
+  label: "stable"
+  codename: "WolfStrike"
+
+build:
+  number: 20260601
+  date: "2026-06-01"
+  pipeline: "github-actions"
+
+compatibility:
+  python: ">=3.10"
+  bash: ">=5.0"
+  os:
+    - linux
+    - macos
+
+metadata:
+  changelog: "./CHANGELOG.md"
+  roadmap: "./ROADMAP.md"
+  release_template: "./release-template.yml"
+  architecture: "./docs/architecture.md"
+
+checksum:
+  enabled: true
+  algorithm: "sha256"
+  file: "version.yml"
