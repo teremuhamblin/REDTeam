@@ -1,0 +1,15 @@
+github: teremuhamblin
+
+custom:
+  - "https://github.com/sponsors/teremuhamblin"
+  - "https://paypal.me/teremu"
+
+tiers:
+  legionnaire:
+    description: "Soutien aux outils REDTeam — Niveau Légionnaire"
+  caporal-chef:
+    description: "Support avancé — Niveau Caporal‑Chef"
+  adjudant:
+    description: "Support stratégique — Niveau Adjudant"
+  commandant:
+    description: "Support total — Niveau Commandant (Légion Opérationnelle)"
